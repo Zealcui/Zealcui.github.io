@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__cse_wustl_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>MCNN</title>
+<style type="text/css">
+      a {
+      color: #1772d1;
+      text-decoration:none;
+      }
+      a:focus, a:hover {
+      color: #f09227;
+      text-decoration:none;
+      }
+      body,td,th {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+      }
+      strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+      }
+      heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 700
+      }
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this fixed width container surrounds the other divs ~~ */
+.container {
+	width: 960px;
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: #ADB96E;
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+.content {
+
+	padding: 10px 0;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #CCC49F;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76368008-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<style type="text/css"></style></head>
+
+<body data-gr-c-s-loaded="true">
+
+<div class="container">
+<div class="header"><a href="http://www.zealcui.github.io/projects/mcnn/#"><img src="" alt="" name="Insert_logo" width="180" height="90" id="Insert_logo" style="background-color: #C6D580; display:block;"></a> 
+    <!-- end .header --></div>
+  <div class="content">
+  <center>
+  
+    <h1>Multi-Scale Convolutional Neural Network for Time Series Classification (MCNN)</h1>
+    <a target="_blank" href="http://www.zealcui.github.io/"> Zhicheng Cui</a>
+	 <a target="_blank" href="http://www.cse.wustl.edu/~wenlinchen/"> Wenlin Chen</a>
+    <a target="_blank" href="http://www.cse.wustl.edu/~ychen/"> Yixin Chen</a>
+	</center> 
+	<center>
+		<h1></h1>
+  		<img src="./architecture.png" alt="architecture	" style="width:80%" />
+   </center>
+	<h2>Introduction</h2>
+	<p>Time series classification (TSC), the problem of predicting class labels of time series, has been around for decades within the community of 
+	data mining and machine learning, and found many important applications such as biomedical engineering and clinical prediction. However, 
+	it still remains challenging and falls short of classification accuracy and efficiency. Traditional approaches typically involve extracting 
+	discriminative features from the original time series using dynamic time warping (DTW) or shapelet transformation, based on which an off-the-shelf 
+	classifier can be applied. These methods are ad-hoc and separate the feature extraction part with the classification part, which limits their 
+	accuracy performance. Plus, most existing methods fail to take into account the fact that time series often have features at different time scales. 
+	To address these problems, we propose a novel end-to-end neural network model, Multi-Scale Convolutional Neural Networks (MCNN), which incorporates 
+	feature extraction and classification in a single framework. Leveraging a novel multi-branch layer and learnable convolutional layers, 
+	MCNN automatically extracts features at different scales and frequencies, leading to superior feature representation. MCNN is also computationally 
+	efficient, as it naturally leverages GPU computing. We conduct comprehensive empirical evaluation with various existing methods on a large number of 
+	benchmark datasets, and show that MCNN advances the state-of-the-art by achieving superior accuracy performance than other leading methods.</p>   
+  
+    <h2>  <a target="_blank" href="http://www.zealcui.github.io/projects/mcnn/mcnn.tar.gz">Python Code Download</a> </h2>
+    <p>For any questions or bug reports, please contact <a target="_blank" href="http://www.zealcui.github.io/">Zhicheng Cui</a> (z.cui AT wustl.edu).</p>
+    <h2>Reference</h2>
+    <p>[1]. Z. Cui, W. Chen and Y. Chen, <em>Multi-Scale Convolutional Neural Network for Time Series Classification</em>, arXiv preprint arXiv:1603.06995, 2016. <a target="_blank" href="http://arxiv.org/abs/1603.06995">(paper)</a></p>
+    
+    <h2>Acknowledgement</h2>
+	 <p>This research is supported in part by the IIS-1343896, DBI-1356669, and III-1526012 grants from the National Science Foundation of the United States, a Microsoft Research
+	 	New Faculty Fellowship, and a Barnes-Jewish Hospital Foun-dation grant.
+	 </p>    
+    <!-- end .content --></div>
+  <div class="footer">
+    <p>&nbsp;</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+
+
+</body><div></div><div></div></html>
